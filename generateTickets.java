@@ -18,9 +18,9 @@ import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.*;  
 
 public class generateTickets {
-    public static String allSongsListExcelPath =  "C:\\Users\\laiyer\\Desktop\\Tambola_songs.xlsx";
-    public static String allParticipantNamesListExcelPath = "C:\\Users\\laiyer\\Desktop\\namess.xlsx";
-    public static String folderToSavetheTickets = "C:\\Users\\laiyer\\Desktop\\Tickets1\\";
+    public static String allSongsListExcelPath =  "<path>\\songs.xlsx";
+    public static String allParticipantNamesListExcelPath = "<path>\\names.xlsx";
+    public static String folderToSavetheTickets = "<path>\\OutputTickets\\";
     public static HashMap<Integer,String> hm_songs = createHashMapSongs(0,0,1);
 	public static HashMap<String,Integer> hm_names = createHashMapNames();
     public static List<String> filenames = createFileNamesList();
