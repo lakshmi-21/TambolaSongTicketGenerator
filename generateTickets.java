@@ -18,9 +18,14 @@ import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.*;  
 
 public class generateTickets {
-    public static String allSongsListExcelPath =  "<path>\\songs.xlsx";
-    public static String allParticipantNamesListExcelPath = "<path>\\names.xlsx";
-    public static String folderToSavetheTickets = "<path>\\OutputTickets\\";
+    // public static String allSongsListExcelPath =  "C:\\Users\\laiyer\\Desktop\\Tambola_songs.xlsx";
+    // public static String allParticipantNamesListExcelPath = "C:\\Users\\laiyer\\Desktop\\namess.xlsx";
+    // public static String folderToSavetheTickets = "C:\\Users\\laiyer\\Desktop\\Tickets1\\";
+    
+    public static String allSongsListExcelPath =  "C:/Users/laiyer/OneDrive - Microsoft/Desktop/Tambola2022/LetsPlayTambolaSongs.xlsx";
+    public static String allParticipantNamesListExcelPath = "C:/Users/laiyer/OneDrive - Microsoft/Desktop/Tambola2022/namess1.xlsx";
+    public static String folderToSavetheTickets = "C:/Users/laiyer/OneDrive - Microsoft/Desktop/Tambola2022/TicketsNew/";
+
     public static HashMap<Integer,String> hm_songs = createHashMapSongs(0,0,1);
 	public static HashMap<String,Integer> hm_names = createHashMapNames();
     public static List<String> filenames = createFileNamesList();
@@ -64,6 +69,7 @@ public class generateTickets {
                           temp = n[0] + "_"+t;
                       }
                      filenames.add(temp);
+                    //filenames.add(hmvalue);
 		 		}
 		 	}
              System.out.println(filenames);
@@ -147,7 +153,8 @@ public static int totalTickets()
             //XSSFSheet spreadsheet= workbook.createSheet(" Ticket ");
 
 			//XSSFSheet sheet1 = workbook.getSheet("Sheet1");
-            XSSFSheet sheet1 = workbook.createSheet("Sheet1"); 
+            XSSFSheet sheet1 = workbook.createSheet("Sheet1");
+            sheet1.setDefaultColumnWidth(14); 
     
             // creating a row object
             XSSFRow row;
@@ -158,7 +165,7 @@ public static int totalTickets()
 
 			XSSFFont font = ((XSSFWorkbook) workbook).createFont();
 			font.setFontName("Arial");
-			font.setFontHeightInPoints((short) 9);
+			font.setFontHeightInPoints((short) 10);
 			font.setBold(true);
 
 			CellStyle style = workbook.createCellStyle();
@@ -171,7 +178,9 @@ public static int totalTickets()
 			style.setWrapText(true); 
 
 			style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-			style.setFillForegroundColor(IndexedColors.LIGHT_CORNFLOWER_BLUE.getIndex());
+            
+			//style.setFillForegroundColor(IndexedColors.LIGHT_CORNFLOWER_BLUE.getIndex());
+            style.setFillForegroundColor(IndexedColors.LIGHT_TURQUOISE.getIndex());
 
 			//style.setLocked(true);
 			
