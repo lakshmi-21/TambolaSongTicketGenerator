@@ -7,7 +7,7 @@ This ticket has grid of 3 rows and 9 columns of which 15 cells will be filled fo
 
 generateTickets.java file has all the utility functions
 
-all you have to do is just to give the file paths in line no 21,22,23
+all you have to do is just to give the file paths in line no 25,26,27
 
 the format for songs file excel would be: 1st column will have sl no starting from 1 and 2nd column wll have the songs name
 
